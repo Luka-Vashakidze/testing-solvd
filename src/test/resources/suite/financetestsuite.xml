@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="financial suite">
+    <test name="checkout tests">
+        <classes>
+            <class name="com.solvd.testng.CheckoutTest"/>
+            <class name="com.solvd.testng.PlayerTest"/>
+        </classes>
+    </test>
+</suite>
