@@ -4,7 +4,7 @@ import com.solvd.gamestore.Player;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class PlayerTest {
+public class VerifyPlayerTest {
 
     @Test
     public void testBuySuccess() {

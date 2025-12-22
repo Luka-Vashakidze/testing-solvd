@@ -4,7 +4,7 @@ import com.solvd.gamestore.Game;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class GameTest {
+public class VerifyGameTest {
 
     @Test
     public void testGameTitleLowercase() {

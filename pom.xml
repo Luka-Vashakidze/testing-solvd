@@ -13,6 +13,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <suite.file>src/test/resources/suite/storeTestSuite.xml</suite.file>
     </properties>
 
     <dependencies>
@@ -32,9 +33,7 @@
                 <version>3.5.4</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>
-                            src/test/resources/suite/storeTestSuite.xml
-                        </suiteXmlFile>
+                            <suiteXmlFile>${suite.file}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

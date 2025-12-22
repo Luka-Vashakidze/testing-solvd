@@ -6,9 +6,9 @@
 
     <test name="store tests">
         <classes>
-            <class name="com.solvd.testng.InventoryTest"/>
-            <class name="com.solvd.testng.SupplierTest"/>
-            <class name="com.solvd.testng.GameTest"/>
+            <class name="com.solvd.testng.VerifyInventoryTest"/>
+            <class name="com.solvd.testng.VerifySupplierTest"/>
+            <class name="com.solvd.testng.VerifyGameTest"/>
         </classes>
     </test>
 </suite>

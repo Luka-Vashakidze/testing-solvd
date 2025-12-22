@@ -2,8 +2,8 @@
 <suite name="financial suite">
     <test name="checkout tests">
         <classes>
-            <class name="com.solvd.testng.CheckoutTest"/>
-            <class name="com.solvd.testng.PlayerTest"/>
+            <class name="com.solvd.testng.VerifyCheckoutTest"/>
+            <class name="com.solvd.testng.VerifyPlayerTest"/>
         </classes>
     </test>
 </suite>
