@@ -1,0 +1,25 @@
+Test Case ID: test_case_add_email_address_for_auth_user_#1
+Test Priority: High
+Test Description: Verify authenticated user can add a new email address to their account.
+
+Prerequisites:
+1. Valid Personal Access Token with 'user' scope.
+2. Email address must NOT already exist on the account.
+
+Test Steps:
+1. Send POST request to https://api.github.com/user/emails
+2. Header: Authorization: Bearer <TOKEN>
+3. Body: {"emails": ["lukavashakidze1@gmail.com"]}
+
+Expected Result:
+1. Status Code: 201 Created.
+2. JSON Body: Array containing the new email object.
+   - "email": "lukavashakidze1@gmail.com"
+   - "verified": false
+
+Actual Response Possibilities:
+1. Positive: 201 Created.
+2. Negative: 422 Unprocessable Entity (Email already exists).
+3. Negative: 401 Unauthorized (Invalid Token).
+
+Status: Success

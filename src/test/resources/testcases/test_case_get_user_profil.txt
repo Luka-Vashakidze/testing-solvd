@@ -1,0 +1,25 @@
+Test Case ID: test_case_get_user_profile_#1
+Test Priority: High
+Test Description: Verify successful retrieval of a specific user's public profile.
+
+Prerequisites:
+1. The user "Luka-Vashakidze" must exist on GitHub.
+2. No authentication is strictly required for public profiles, but token ensures higher rate limits.
+
+Test Steps:
+1. Send GET request to https://api.github.com/users/Luka-Vashakidze
+2. Verify response status code is 200 OK.
+3. Validate response body contains correct "login" and "id".
+
+Expected Result:
+1. Status Code: 200 OK
+2. JSON Body:
+   - "login": "Luka-Vashakidze"
+   - "type": "User"
+   - "id": (Integer, not null)
+
+Actual Response Possibilities:
+1. Positive: 200 OK (User found)
+2. Negative: 404 Not Found (If username is typoed)
+
+Status: Success

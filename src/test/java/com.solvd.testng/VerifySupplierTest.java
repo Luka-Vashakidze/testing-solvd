@@ -48,3 +48,4 @@ public class VerifySupplierTest {
         assertTrue(s.getStock() > 0);
     }
 }
+    

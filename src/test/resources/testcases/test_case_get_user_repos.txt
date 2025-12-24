@@ -1,0 +1,24 @@
+Test Case ID: test_case_get_user_repos_#1
+Test Priority: Medium
+Test Description: Verify retrieval of the list of repositories owned by the user.
+
+Prerequisites:
+1. User must have at least one public repository.
+
+Test Steps:
+1. Send GET request to https://api.github.com/users/Luka-Vashakidze/repos
+2. Verify response status code is 200 OK.
+3. Verify response is a JSON Array [].
+
+Expected Result:
+1. Status Code: 200 OK
+2. JSON Body: Array of repository objects.
+   - Object 1 "owner"."login": "Luka-Vashakidze"
+   - Object 1 "private": false (since it is a public endpoint)
+
+Actual Response Possibilities:
+1. Positive: 200 OK with list of repos.
+2. Positive : 200 OK with empty array [] (if user has no repos).
+3. Negative: 404 Not Found (User does not exist).
+
+Status: Success

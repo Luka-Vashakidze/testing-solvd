@@ -1,0 +1,24 @@
+Test Case ID: test_case_delete_email_address_for_auth_user_#1
+Test Priority: High
+Test Description: Verify authenticated user can remove an email address.
+
+Prerequisites:
+1. Valid Personal Access Token.
+2. The email address must exist on the account.
+3. Cannot delete the primary email if it is the only one.
+
+Test Steps:
+1. Send DELETE request to https://api.github.com/user/emails
+2. Header: Authorization: Bearer <TOKEN>
+3. Body: {"emails": ["lukavashakidze1@gmail.com"]}
+
+Expected Result:
+1. Status Code: 204 No Content.
+2. Response Body: Empty.
+
+Actual Response Possibilities:
+1. Positive: 204 No Content.
+2. Negative: 404 Not Found (Email not associated with user).
+3. Negative: 422 Validation Failed (Cannot delete primary email).
+
+Status: Success

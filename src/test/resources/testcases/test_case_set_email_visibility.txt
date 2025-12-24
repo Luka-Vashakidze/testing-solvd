@@ -1,0 +1,23 @@
+Test Case ID: test_case_set_email_visibility_#1
+Test Priority: Low
+Test Description: Verify user can toggle email visibility between public and private.
+
+Prerequisites:
+1. Valid Personal Access Token.
+
+Test Steps:
+1. Send PATCH request to https://api.github.com/user/email/visibility
+2. Header: Authorization: Bearer <TOKEN>
+3. Body: {"visibility": "public"} (or private)
+
+Expected Result:
+1. Status Code: 200 OK.
+2. JSON Body: Array of emails showing updated visibility.
+   - "visibility": "public"
+
+Actual Response Possibilities:
+1. Positive: 200 OK.
+2. Negative: 401 Unauthorized.
+3. Negative: 422 Unprocessable Entity (Invalid option provided).
+
+Status: Success
